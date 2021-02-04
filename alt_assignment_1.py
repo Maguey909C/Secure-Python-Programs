@@ -189,7 +189,6 @@ def voting_questions(subject):
             else:
                 print(error_prompt())
                 break
-                # response = question(subject)
         elif subject == 'citizenship':
             if check_citizenship(response):
                 return response
@@ -202,7 +201,6 @@ def voting_questions(subject):
             else:
                 print("Please use a valid abbreviation for your state. Example: California = CA.")
                 break
-                # response = question(subject)
         else:
             if check_zip(response):
                 return response
@@ -252,9 +250,7 @@ def summary(first_name, last_name, age, citizenship, state, zipcode):
 if __name__ == '__main__':
     print(start_prompt())
     while True:
-        # Ask user if they want to continue with voter registration
         SELECTION = input('Do you want to continue with Voter Registration? [y/n] ').strip()
-
         if SELECTION == 'y' or SELECTION == 'yes':
             FIRST_NAME = user_interest(voting_questions("first_name"))
             LAST_NAME = user_interest(voting_questions("last_name"))
@@ -270,52 +266,3 @@ if __name__ == '__main__':
         else:
             print("Oops! That is not a valid entry. Please enter yes (y) or no (n).")
     print("Goodbye")
-
- # FIRST_NAME = ''
-    # LAST_NAME = ''
-    # while True:
-    #     SELECTION = input('Do you want to continue with Voter Registration? [y/n] ').strip()
-    #     if SELECTION == 'y' or SELECTION == 'yes':
-    #         FIRST_NAME = voting_questions("first_name")
-    #         if check_name(FIRST_NAME):
-    #             return
-    #         else:
-    #             print(error_prompt())
-    #     elif SELECTION == 'n' or SELECTION == 'no':
-    #         break
-    #     else:
-    #         print("Oops! That is not a valid entry. Please enter yes (y) or no (n).")
-    # if SELECTION == 'y' or SELECTION == 'yes':
-    #     LAST_NAME = user_interest(voting_questions("last_name"))
-    #     SELECTION = input('Do you want to continue with Voter Registration? [y/n] ').strip()
-    # elif SELECTION == 'n' or SELECTION == 'no':
-    #     break
-    # else:
-    #     print("Oops! That is not a valid entry. Please enter yes (y) or no (n).")
-    # if SELECTION == 'y' or SELECTION == 'yes':
-    #     AGE = user_interest(voting_questions('age'))
-    #     SELECTION = input('Do you want to continue with Voter Registration? [y/n] ').strip()
-    # elif SELECTION == 'n' or SELECTION == 'no'::
-    #     break
-    # else:
-    #     print("Oops! That is not a valid entry. Please enter yes (y) or no (n).")
-    # if SELECTION == 'y' or SELECTION == 'yes':
-    #     CITIZENSHIP = user_interest((voting_questions('citizenship')))
-    #     SELECTION = input('Do you want to continue with Voter Registration? [y/n] ').strip()
-    # else:
-    #     print("Oops! That is not a valid entry. Please enter yes (y) or no (n).")
-    # if
-    #     STATE = user_interest(voting_questions("state"))
-    #     SELECTION = input('Do you want to continue with Voter Registration? [y/n] ').strip()
-    # else:
-    #     print("Oops! That is not a valid entry. Please enter yes (y) or no (n).")
-    # if
-    #     ZIPCODE = user_interest(voting_questions("zipcode"))
-    #     SELECTION = input('Do you want to continue with Voter Registration? [y/n] ').strip()
-    # else:
-    #     print("Oops! That is not a valid entry. Please enter yes (y) or no (n).")k
-
-        # print(summary(FIRST_NAME, LAST_NAME, AGE, CITIZENSHIP, STATE, ZIPCODE))
-    #     print(end_prompt())
-    #     break
-    # print("End program")
